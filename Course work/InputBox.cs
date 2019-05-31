@@ -22,14 +22,10 @@ namespace Course_work
 
         private void InputBox_Load(object sender, EventArgs e)
         {
-
-
         }
         public static string Show(string inputBoxText, string Password)
         {
-            
             newInputBox = new InputBox();
-            
             newInputBox.label1.Text = inputBoxText;
             newInputBox.ShowDialog();
             return returnString;
@@ -37,18 +33,15 @@ namespace Course_work
 
         private void SumbitButton_Click(object sender, EventArgs e)
         {
-            
             if (SearchBox.Enabled && SearchBox.Text == "")
             {
                 SearchBox.Text = "Введите Фамилию";
-              
             }
             else
             {
                 returnString = SearchBox.Text;
                 newInputBox.Dispose();
                 Close();
-
             }
         }
 

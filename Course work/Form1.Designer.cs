@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DataBaseInfo = new System.Windows.Forms.DataGridView();
             this.NumberOfSportsman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FIOOfSportsman = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,8 +82,8 @@
             // 
             // NumberOfSportsman
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.NumberOfSportsman.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.NumberOfSportsman.DefaultCellStyle = dataGridViewCellStyle2;
             this.NumberOfSportsman.HeaderText = "№ Учасника";
             this.NumberOfSportsman.Name = "NumberOfSportsman";
             this.NumberOfSportsman.ReadOnly = true;
@@ -592,6 +592,7 @@
             this.DowanloadButton.TabIndex = 24;
             this.DowanloadButton.Text = "Загрузить базу данных";
             this.DowanloadButton.UseVisualStyleBackColor = true;
+            this.DowanloadButton.Click += new System.EventHandler(this.DowanloadButton_Click);
             // 
             // Form1
             // 
@@ -623,6 +624,7 @@
             this.Controls.Add(this.DataBaseInfo);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataBaseInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfSportsmanNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlaceOfSportsmanNummericUpDown)).EndInit();

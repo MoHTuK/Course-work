@@ -80,7 +80,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchBox);
             this.Name = "InputBox";
-            this.Text = "InputBox";
+            this.Text = "Поле для ввода";
             this.Load += new System.EventHandler(this.InputBox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -42,17 +42,5 @@ namespace Course_work
 
         }
 
-        public void writeToFile(BinaryWriter output) //метод записи данных карты в файл
-        {
-            output.Write(this.regestration_number);
-            output.Write(this.surname);
-            output.Write(this.name);
-            output.Write(this.patronymic);
-            output.Write(this.counrty);
-            output.Write(this.kind_ofsport);
-            output.Write(this.place);
-           
-        }
-
     }
 }

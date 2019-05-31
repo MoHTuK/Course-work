@@ -23,14 +23,10 @@ namespace Course_work
 
         private void InputBox2_Load(object sender, EventArgs e)
         {
-
         }
         public static string Show2(string Country)
         {
-
-            newInputBox2 = new InputBox2();
-
-            
+            newInputBox2 = new InputBox2();   
             newInputBox2.ShowDialog();
             return returnString;
         }
@@ -40,14 +36,12 @@ namespace Course_work
             if (SearchComboBox.Enabled && SearchComboBox.Text == "")
             {
                 SearchComboBox.Text = "Введите Cтрану";
-
             }
             else
             {
                 returnString = SearchComboBox.Text;
                 newInputBox2.Dispose();
                 Close();
-
             }
         }
 
