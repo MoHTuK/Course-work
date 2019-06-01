@@ -149,6 +149,7 @@ namespace Course_work
                 if (prize > 3 )
                 {
                     DataBaseInfo.Rows.RemoveAt(i);
+                    i -= 1;
                 }
             }
             DataBaseInfo.Refresh();
@@ -205,18 +206,18 @@ namespace Course_work
                     counter = 0;
                     for (int j = 0; j < DataBaseInfo.RowCount; j++)
                     {
-                        if (DataBaseInfo.Rows[j].Cells[2].Value == Name) 
+                        if (Convert.ToString(DataBaseInfo.Rows[j].Cells[2].Value) == Name[j]) 
                         {
                             if(Convert.ToString(DataBaseInfo.Rows[j].Cells[2].Value) ==Name[h])
                             if (Convert.ToInt32(DataBaseInfo.Rows[j].Cells[4].Value) == i)
                                 counter += 1;
                         }
                         if (i == 1)
-                            prize = "Золотых медалей";
+                            prize = "Золотых медалей  ";
                         else if (i == 2)
-                            prize = "серебряных медалей";
+                            prize = "серебряных медалей  ";
                         else
-                            prize = "Бронзовых медалей";
+                            prize = "Бронзовых медалей  ";
                         count = j;
                     }
                     richTextBox1.Text += "\nКоличество " + prize + counter;
@@ -262,11 +263,19 @@ namespace Course_work
                     for (int j = 0; j < DataBaseInfo.ColumnCount; j++)
                     {
                         DataBaseInfo.Rows[i].Cells[j].Value = reader.ReadString();
+                       
                     }
                     DataBaseInfo.Rows.Add();
                 }
             }
+            for(int i =0;i<DataBaseInfo.RowCount-1;i++)
+            {
+                string[] tmpsurname = Convert.ToString(DataBaseInfo.Rows[i].Cells[1].Value).Split(' ');
+                Base.Add(new Sportsman(Convert.ToInt32(DataBaseInfo.Rows[i].Cells[0].Value), Convert.ToString(tmpsurname[0]), Convert.ToString(tmpsurname[1]), Convert.ToString(tmpsurname[2]), Convert.ToString(DataBaseInfo.Rows[i].Cells[2].Value), Convert.ToString(DataBaseInfo.Rows[i].Cells[3].Value), Convert.ToInt32(DataBaseInfo.Rows[i].Cells[4].Value)));
+            }
+
             DataBaseInfo.Rows.RemoveAt(counter);
+            DataBaseInfo.Refresh();
             
         }
 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DataBaseInfo = new System.Windows.Forms.DataGridView();
             this.NumberOfSportsman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FIOOfSportsman = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,8 +82,8 @@
             // 
             // NumberOfSportsman
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            this.NumberOfSportsman.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.NumberOfSportsman.DefaultCellStyle = dataGridViewCellStyle1;
             this.NumberOfSportsman.HeaderText = "№ Учасника";
             this.NumberOfSportsman.Name = "NumberOfSportsman";
             this.NumberOfSportsman.ReadOnly = true;
